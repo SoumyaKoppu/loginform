@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v1 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- STYLE CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+   <script type="text/javascript">
+
+		function success(){ 
+			const name = document.getElementById('uname').value;
+	        const pwd = document.getElementById('pswd').value;
+			if(name == "" || name == null && pwd=="" || pwd == null )
+			{
+				alert("Please enter username and password");
+			}
+			else
+		      alert("login successfull");
+	    }
+	  function clear(){
+		document.getElementById('loginform').reset();
+	  }
+</script>
+    </head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/reg-form5-bg.jpg');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="images/reg-form.jpg" alt="">
+				</div>
+				<form id="loginform" >
+					<h3 style="font-style: italic;">Login Form</h3>
+					<div class="form-group">
+						<input type="text" id="uname" placeholder="UserName" class="form-control"required>
+					</div>
+					<div class="form-group">
+						<input type="text" id="pswd" placeholder="Password" class="form-control"required>
+                    </div>
+                    <div class="form-group">
+                       <button id="btnlogin" onclick="success()">Login</button>
+                       <button id="btnreset" onclick="clear()">Reset</button>
+                    </div>
+                    <br>
+                  <div>
+                    <p class="msg">Back to  <a href="index.html">Registration</a></p>
+                  </div>
+                </form>
+            </div>
+        </div>
+    
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v1 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			/* Chrome, Safari, Edge, Opera */
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+			  -webkit-appearance: none;
+			  margin: 0;
+			}
+			
+			/* Firefox */
+			input[type=number] {
+			  -moz-appearance: textfield;
+			}
+
+	 </style>
+
+	 <script type="text/javascript">
+       
+	function validate()
+	{ 
+	const firstname = document.getElementById('fname').value;
+	const lastname = document.getElementById('lname').value;
+    const username = document.getElementById('uname').value;
+    const emailid = document.getElementById('email').value;
+	const mobile = document.getElementById('phone').value;
+	const Gender = document.getElementById('gender').value;
+    const password = document.getElementById('pwd').value;
+    const password2 = document.getElementById('cpwd').value;
+    const check=  document.getElementById("agree-term").checked;
+
+       if(firstname =="" || firstname ==null || lastname =="" || lastname == null || username == "" || username ==null || emailid =="" || 
+       	emailid ==null || mobile =="" || mobile ==null || Gender =="" || Gender == null || password =="" || password == null ||       password2 =="" || password2 ==null) 
+       {
+        alert("Please fill all fields");
+      }
+     // else if(isNaN(mobile)){
+      //	alert("mobile number must be number");
+     // }
+   else if(password!=password2)
+    {
+    	alert("password and Confirm password are not same");
+    }
+    else if(check == false)
+    {
+         alert("you must agree to the terms first");
+    }
+    else
+    	alert("Registered Successfully");
+}
+function clear(){
+	document.getElementById("regform").reset();
+}
+
+</script>
+	
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/reg-form5-bg.jpg');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="images/reg-form.jpg" alt="">
+				</div>
+				<form id="regform">
+					<h3 style="font-style: italic;">Registration Form</h3>
+					<div class="form-group">
+						<input type="text" id="fname" placeholder="First Name" class="form-control" required>
+						<input type="text" id="lname" placeholder="Last Name" class="form-control" required>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" id="uname" placeholder="Username" class="form-control" required>
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="Email" id="email" placeholder="someone@gmail.com" class="form-control" required>
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="number" id="phone" maxlength="10" placeholder="Phone Number" class="form-control" required>
+						<i class="zmdi zmdi-PhoneNumber"></i>
+					</div>
+					<div class="form-wrapper">
+						<select name="" id="gender" class="form-control" required>
+							<option value="" disabled selected>Gender</option>
+							<option value="male">Male</option>
+							<option value="Female">Female</option>
+							<option value="other">Other</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" id="pwd" placeholder="Password" minlength="6" maxlength="10" class="form-control" required>
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" id="cpwd" placeholder="Confirm Password" class="form-control" required>
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-group">
+                      <input type="checkbox" name="agree-term" id="agree-term" class="agree-term">
+                      <label for="agree-term" class="label-agree-term">I agree all statements in Terms of service
+                      </label>
+                    </div>
+				<div class="form-group">
+					<button id="btnreg" value="submit" onclick="validate()">Register</button>
+					<button id="btnreset" value="reset" onclick="clear()">Reset</button>
+				</div>
+			<div>
+				<p class="msg"> Already Registered? <a href="login.html">Login</a></p>
+			 </div>
+			</form>
+			</div>
+		</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
